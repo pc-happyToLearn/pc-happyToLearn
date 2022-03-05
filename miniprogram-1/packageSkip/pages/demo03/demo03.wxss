@@ -1,0 +1,9 @@
+/* pages/demo03/demo03.wxss */
+.canvas_view {
+    width: 100%;
+    height: 200rpx;
+    background: #1296db;
+    color: #fff;
+    font-size: 27px;
+    text-align: center;
+}

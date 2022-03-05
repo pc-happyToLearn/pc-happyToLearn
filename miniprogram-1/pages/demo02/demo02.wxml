@@ -1,0 +1,118 @@
+<!--pages/demo02/demo02.wxml-->
+<view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <input class="topInput" value='{{date1}}' placeholder='开始日期' />
+    </picker>
+    <view class="topTxt">至</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange2" bindcolumnchange="bindMultiPickerColumnChange2" value="{{multiIndex}}" range="{{multiArray}}">
+        <input class="topInput" value='{{date2}}' placeholder='终止日期' />
+    </picker>
+    <button id='checkButton' bindtap="check">
+        查询
+    </button>
+</view>
+<view class="key-box">
+    <picker class="topPicker" bindchange="keyPickerChange" mode="multiSelector" value="{{keyIndex}}" range="{{productionId}}">
+        <image id='pull' src="../../images/下拉.png"></image>
+    </picker>
+    <input class="topInput3" placeholder="请输入关键词" value="{{key}}" bindinput="keyInput" />
+</view>
+<view class="key-box">
+    <input class="topInput3" placeholder="请输入值" value="{{checkValue}}" bindinput="checkKey" />
+</view>
+<view class="table">
+    <view class="tr">
+        <view class="th">产品批号</view>
+        <view class="th">匹数</view>
+        <view class="th">米数</view>
+        <view class="th">出库人</view>
+    </view>
+    <block wx:for="{{showListData}}" wx:key="{[index]}" wx:if="{{index < i*num && index >=(i-1)*num }}">
+        <view wx:if="{{index % 2 == 0}}" bindtap="trClick" id="{{index}}" bindlongtap="showPopup">
+            <view wx:if="{{index==clickId}}">
+                <view class="tr bg-w" style="background-color: orange;">
+                    <view class="td first">{{item[0]}}</view>
+                    <view class="td">{{item[1]}}</view>
+                    <view class="td">{{item[2]}}</view>
+                    <view class="td">{{item[3]}}</view>
+                </view>
+            </view>
+            <view wx:else>
+                <view class="tr bg-w">
+                    <view class="td first">{{item[0]}}</view>
+                    <view class="td">{{item[1]}}</view>
+                    <view class="td">{{item[2]}}</view>
+                    <view class="td">{{item[3]}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else id="{{index}}" bindtap="trClick" bindlongtap="showPopup">
+            <view wx:if="{{index==clickId}}">
+                <view class="tr bg-g" style="background-color: orange;">
+                    <view class="td first">{{item[0]}}</view>
+                    <view class="td">{{item[1]}}</view>
+                    <view class="td">{{item[2]}}</view>
+                    <view class="td">{{item[3]}}</view>
+                </view>
+            </view>
+            <view wx:else>
+                <view class="tr bg-g" bindtap="trClick">
+                    <view class="td first">{{item[0]}}</view>
+                    <view class="td">{{item[1]}}</view>
+                    <view class="td">{{item[2]}}</view>
+                    <view class="td">{{item[3]}}</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class='popup' style="{{closePopup}}">
+        <view class="popupPage">
+            <view class="popupTitle">
+                <view class="popupTitleTxt">子单编辑</view>
+                <image class='drop' src="../../images/关闭.png" bindtap="closePopup"></image>
+            </view>
+        </view>
+        <view class="popupPageContent">
+            <view class="popupProduct">
+                <view class='popupLeftTxt'>
+                    产品批号
+                </view>
+                <view class="popupCodeTxt">{{ productCode }}</view>
+            </view>
+            <view class="popupProduct">
+                <view class='popupLeftTxt'>
+                    米数
+                </view>
+                <input class="popupRightInput" placeholder="请输入新米数" value="{{productMeter}}" bindinput="changeProductMeter" />
+            </view>
+            <view class="popupProduct">
+                <view class='popupLeftTxt'>
+                    匹数
+                </view>
+                <input class="popupRightInput" placeholder="请输入新匹数" value="{{productCount}}" bindinput="changeProductCount" />
+            </view>
+            <view class="popupProduct">
+                <view class='popupLeftTxt'>
+                    负责人
+                </view>
+                <input class="popupRightInput" placeholder="请输入新负责人" value="{{productManged}}" bindinput="changeProductManged" />
+            </view>
+        </view>
+        <view>
+            <view class="popupButton" bindtap="popupSave">保存</view>
+        </view>
+    </view>
+    <view class='pageControl'>
+        <view class="bottomPage">
+            <view class='{{up}}' bindtap='up'>
+                上一页
+            </view>
+            <view class="pageBottomTxt">
+                第{{i}}页/共{{count}}页
+            </view>
+            <view class='{{down}}' bindtap='down'>
+                下一页
+            </view>
+        </view>
+    </view>
+</view>

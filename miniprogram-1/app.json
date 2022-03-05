@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/wxml/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/demo02/demo02",
+    "pages/demo01/demo01"
+  ],
+  "subpackages": [{
+      "root": "packageSkip",
+      "pages": [
+        "pages/demo03/demo03"
+      ]
+    },
+    {
+      "root": "packageChart",
+      "pages": [
+        "pages/demo/demo"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "MiniProgram",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/demo01/demo01",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/selectedHome.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "监控",
+        "iconPath": "/images/monitor.png",
+        "selectedIconPath": "/images/selectedMonitor.png"
+      },
+      {
+        "pagePath": "pages/demo02/demo02",
+        "text": "生产量",
+        "iconPath": "/images/production.png",
+        "selectedIconPath": "/images/selectedProduction.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

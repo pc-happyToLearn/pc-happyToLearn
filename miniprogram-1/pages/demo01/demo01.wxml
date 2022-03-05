@@ -1,0 +1,6 @@
+<!--pages/demo/demo01.wxml-->
+<!-- canvas.wxml -->
+<canvas style="width: 300px; height: 200px;" canvas-id="lineCanvas"></canvas>
+<canvas style="width: 400px; height: 200px;" canvas-id="ringCanvas"></canvas>
+<canvas style="width: 400px; height: 380px;" canvas-id="pieCanvas"></canvas>
+<canvas style="width: 400px; height: 200px;" canvas-id="columnCanvas"></canvas>

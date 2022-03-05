@@ -1,0 +1,148 @@
+/* pages/wxml/index.wxss */
+page{
+    background:#fafafa no-repeat 20rpx 20rpx url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.soutu123.com%2Felement_origin_min_pic%2F18%2F03%2F20%2F1656ebf59084ba3.jpg%21%2Ffw%2F700%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.soutu123.com&app=20)
+    
+}
+     
+    .container {
+
+    height: 100%;
+     
+    display: flex;
+     
+    flex-direction: column;
+     
+    padding: 0;
+     
+    box-sizing: border-box;
+    
+     
+    }
+     
+    .userinfo {
+    display: flex;
+    padding: 100rpx 0;
+     
+    align-items: center;
+    flex-direction: column;
+     
+    }
+     
+    .userinfo-avatar {
+     
+    width: 128rpx;
+     
+    height: 128rpx;
+     
+    margin: 10rpx;
+     
+    border-radius: 50%;
+    overflow: hidden;
+     
+    }
+    .userinfo-name{
+        font-size:35rpx;
+        font-family: sans-serif;
+        color:#000000;
+        margin:10rpx;
+    }
+     
+    /*表单内容*/
+     
+    .login-from {
+     
+    margin-top: 0rpx;
+     
+    flex: auto;
+     
+    height:100%;
+     
+    }
+     
+    .inputView {
+     
+    background:opacity value;
+
+     
+    line-height: 44px;
+     
+    }
+     
+    /*输入框*/
+     
+    .nameImage, .keyImage {
+     
+    margin-left: 10px;
+     
+    width: 15px;
+     
+    height: 15px
+     
+    }
+     
+    .loginLab {
+     
+    margin: 20px 20px 20px 20px;
+     
+    color: #000000;
+     
+    font-size: 12px
+     
+    }
+     
+    .inputText {
+     
+    flex: block;
+     
+    float: right;
+     
+    text-align: center;
+     
+    margin-right: 100px;
+     
+    margin-top: 11px;
+     
+    color: #000000;
+    
+    font-size: 14px
+     
+    }
+     
+    .line {
+     
+    width: 100%;
+     
+    height: 1px;
+     
+    background-color: #000000;
+
+
+    margin-top: 1px;
+     
+    }
+     
+    /*按钮*/
+     
+    .loginBtnView {
+     
+    width: 100%;
+     
+    height: auto;
+     
+    background-color: opacity value #fff;
+    
+    margin-top: 0px;
+     
+    margin-bottom: 0px;
+     
+    padding-bottom: 0px;
+     
+    }
+     
+    .loginBtn {
+     
+    width: 80%;
+     
+    margin-top: 35px;
+     
+    }

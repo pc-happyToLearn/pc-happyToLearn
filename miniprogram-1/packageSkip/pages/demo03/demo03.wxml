@@ -1,0 +1,9 @@
+<!--pages/demo03/demo03.wxml-->
+<view>
+    <canvas type="2d" class='lineCanvas' id="lineCanvas" style="width:100%"></canvas>
+    <canvas type="2d" class='lineCanvas2' id="lineCanvas2" style="width: 100%;position: absolute;top: 3%;"></canvas>
+    <view class='canvas_view' class="canvas_view" catchtouchmove="changeCanvas" >
+        <view id="skip_tip">滑动此处试试看！</view>
+        <view>{{view_division + 1.0 }}</view>
+    </view>
+</view>
